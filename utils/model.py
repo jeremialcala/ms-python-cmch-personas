@@ -93,18 +93,18 @@ def generate_properties(json_schema: dict) -> dict:
             case _:
                 pass
 
-    _model["createdAt"] = DateTimeField(
+    _model["creado"] = DateTimeField(
         required=False,
         unique=False,
         default=datetime.now()
     )
-    _model["status"] = EnumField(
+    _model["estado"] = EnumField(
         Status,
         required=True,
         unique=False,
         default=Status.REG
     )
-    _model["statusDate"] = DateTimeField(
+    _model["estadoActualizado"] = DateTimeField(
         required=False,
         unique=False,
         default=datetime.now()
