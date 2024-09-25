@@ -8,6 +8,8 @@ from uuid import uuid4
 from datetime import datetime
 import json
 from typing import Annotated
+
+from pycparser.c_ast import Constant
 from pydantic import Field, create_model
 from mongoengine import (
     Document,
@@ -26,12 +28,12 @@ import constants
 
 
 TYPES = {
-        'string': str,
-        'array': list,
-        'boolean': bool,
-        'integer': int,
-        'float': float,
-        'number': float,
+        constants.STRING: str,
+        constants.ARRAY: list,
+        constants.BOOLEAN: bool,
+        constants.INTEGER: int,
+        constants.FLOAT: float,
+        constants.NUMBER: float,
     }
 
 FIELDS = {
